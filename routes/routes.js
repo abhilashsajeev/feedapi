@@ -15,7 +15,7 @@ router.get('/hindu', (req, res) => {
 });
 
 router.get('/timesofindia', (req, res) => {
-  readXMLandSendResponse('http://timesofindia.indiatimes.com/rssfeedstopstories.cms', res);
+  readXMLandSendResponse('http://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms', res);
 });
 router.get('/indianexpress', (req, res) => {
   readXMLandSendResponse('http://indianexpress.com/section/india/feed/', res);

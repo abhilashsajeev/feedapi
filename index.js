@@ -6,8 +6,6 @@ var routes = require('./routes/routes');
 
 var app = express();
 
-
-
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', (req , res) => {

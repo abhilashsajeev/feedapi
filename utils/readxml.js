@@ -4,8 +4,6 @@ var feedparser = new FeedParser();
 var Promise = require('bluebird');
 
 module.exports = (url) => {
- 
-
   return new Promise((resolve, reject) => {
     var req = request(url);
     var dataArray = [];

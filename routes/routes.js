@@ -16,6 +16,4 @@ router.get('/indianexpress', (req, res) => {
   .readXMLandSendResponse('http://indianexpress.com/section/india/feed/', res);
 });
 
-
-
 module.exports = router;

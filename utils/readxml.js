@@ -33,7 +33,6 @@ module.exports = (url) => {
         , item;
 
       while (item = stream.read()) {
-        console.log(item);
         dataArray.push(item);
       }
     });

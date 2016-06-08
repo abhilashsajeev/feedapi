@@ -16,4 +16,6 @@ app.get('/', (req , res) => {
 
 app.use('/today', routes);
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3000, function () {
+	console.log('App started at PORT ', process.env.PORT || 3000);
+});

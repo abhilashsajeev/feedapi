@@ -1,24 +1,19 @@
 var express = require('express');
 var router = express.Router();
-var readXML = require('../utils/readxml');
-
-var readXMLandSendResponse = (url, res)=> {
-  readXML(url)
-  .then((data) => {
-    console.log('data found', data)
-    res.status(200).json(data);
-  })
-}
+var feedController = require('../controllers/feedController')
 
 router.get('/hindu', (req, res) => {
-    readXMLandSendResponse('http://www.thehindu.com/news/national/?service=rss', res)
+    feedController
+    .readXMLandSendResponse('http://www.thehindu.com/news/national/?service=rss', res)
 });
 
 router.get('/timesofindia', (req, res) => {
-  readXMLandSendResponse('http://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms', res);
+  feedController
+  .readXMLandSendResponse('http://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms', res);
 });
 router.get('/indianexpress', (req, res) => {
-  readXMLandSendResponse('http://indianexpress.com/section/india/feed/', res);
+  feedController
+  .readXMLandSendResponse('http://indianexpress.com/section/india/feed/', res);
 });
 
 
